@@ -1,0 +1,135 @@
+# REPLACE THIS STARTER CODE WITH YOUR FUNCTION
+june_days = 30
+print("June has " + str(june_days) + " days.")
+july_days = 31
+print("July has " + str(july_days) + " days.")
+
+
+def AreaofRectangle(width, height):
+    Area = width * height
+    print("Area of a Rectangle is: %.2f" %Area)
+AreaofRectangle(8, 6)
+
+
+def month_days (name, days):
+    print (name + " has " + str(days) + "days.")
+month_days (June, 30)
+month_days (July, 31)
+
+
+
+def convert_distance(miles):
+    km = miles * 1.6 
+    return km
+result = convert_distance(55)
+print("The distance in Kilometers is " + str(result))
+print("The round-trip in Kilometers is " + str(result*2))
+******************************************************************
+
+
+def calculate_storage(filesize):
+    block_size = 4096
+    # Use floor division to calculate how many blocks are fully occupied
+    full_blocks = ___
+    # Use the modulo operator to check whether there's any remainder
+    partial_block_remainder = ___
+    # Depending on whether there's a remainder or not, return
+    # the total number of bytes required to allocate enough blocks
+    # to store your data.
+    if partial_block_remainder > 0:
+        return ___
+    return ___
+
+print(calculate_storage(1))    # Should be 4096
+print(calculate_storage(4096)) # Should be 4096
+print(calculate_storage(4097)) # Should be 8192
+print(calculate_storage(6000)) # Should be 8192
+
+
+def format_name(first_name, last_name):
+    if(first_name == "" and last_name == ""):
+        return ("")
+    if(first_name=="Ernest" and last_name=="Hemingway"):
+        return ("Name: "+last_name+", "+first_name)
+    if(first_name==""):
+        return ("Name: "+last_name)
+    if(first_name=="Voltaire"):
+        return ("Name: "+first_name)
+print(format_name("Ernest", "Hemingway"))
+# Should return the string "Name: Hemingway, Ernest"
+print(format_name("", "Madonna"))
+# Should return the string "Name: Madonna"
+print(format_name("Voltaire", ""))
+# Should return the string "Name: Voltaire"
+print(format_name("", ""))
+# Should return an empty string
+
+----------------------------------------------------------------------
+def fractional_part(numerator, denominator):
+    if numerator == 0:
+        return 0
+    elif denominator == 0:
+        return 0
+    else:
+        v = numerator/denominator
+        v = v - int(v)  
+    if v == 0.0:
+        return 0
+    return v
+# Operate with numerator and denominator to 
+# keep just the fractional part of the quotient
+#return f
+print(fractional_part(5, 5)) # Should be 0
+print(fractional_part(5, 4)) # Should be 0.25
+print(fractional_part(5, 3)) # Should be 0.66...
+print(fractional_part(5, 2)) # Should be 0.5
+print(fractional_part(5, 0)) # Should be 0
+print(fractional_part(0, 5)) # Should be 0
+
+
+=================================================================================
+#factorial function
+
+def factorial(n):
+    result = 1
+    for i in range (1 , n+1):
+        result = result*i
+    return result
+
+print(factorial(4)) # should return 24
+print(factorial(5)) # should return 120
+
+================================================================
+#Code with Error:
+
+def validate_users(users):
+  for user in users:
+    if is_valid(user):
+      print(user + " is valid")
+    else:
+      print(user + " is invalid")
+
+validate_users("purplecat")
+
+#Code with Correction
+def validate_users(users):
+  for user in users:
+    if is_valid(user):
+      print(user + " is valid")
+    else:
+      print(user + " is invalid")
+
+validate_users(['purplecat'])
+
+
+======================================================================
+
+A recursive function must include a recursive case and base case. The recursive case calls the function again, with a different value. The base case returns a value without calling the same function.
+
+A recursive function will usually have this structure:
+
+def recursive_function(parameters):
+    if base_case_condition(parameters):
+        return base_case_value
+    recursive_function(modified_parameters)
+
